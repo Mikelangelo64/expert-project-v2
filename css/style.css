@@ -1513,16 +1513,6 @@ input::placeholder, select::placeholder {
   transition: all 0.3s ease;
   z-index: -1;
 }
-@media screen and (max-width: 740px) {
-  .stock-slider .stock-slider__img {
-    left: -30%;
-  }
-}
-@media screen and (max-width: 520px) {
-  .stock-slider .stock-slider__img {
-    left: -63%;
-  }
-}
 .stock-slider .stock-slider__text__block {
   display: -webkit-box;
   display: -ms-flexbox;
