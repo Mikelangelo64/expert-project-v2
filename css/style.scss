@@ -1386,12 +1386,12 @@ input, select{
         transition: all .3s ease;
         z-index: -1;
 
-        @media screen and (max-width: 740px) {
-            left: -30%;
-        }
-        @media screen and (max-width: 520px) {
-            left: -63%;
-        }
+        // @media screen and (max-width: 740px) {
+        //     left: -30%;
+        // }
+        // @media screen and (max-width: 520px) {
+        //     left: -63%;
+        // }
     }
 
     //.stock-slider__text__block
