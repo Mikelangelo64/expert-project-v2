@@ -1385,7 +1385,7 @@ input, select{
         object-fit: cover;
         transition: all .3s ease;
         z-index: -1;
-        
+
 
         // @media screen and (max-width: 740px) {
         //     left: -30%;
@@ -3123,7 +3123,7 @@ input, select{
         @media screen and (max-width: 712px) {
             padding: 30px 20px;
         }
-        @media screen and (max-width: 390px) {
+        @media screen and (max-width: 420px) {
             padding: 20px 15px;
         }
     }
@@ -3196,7 +3196,7 @@ input, select{
             font-size: 12px;
             line-height: 13px;
         }
-        @media screen and (max-width: 390px) {
+        @media screen and (max-width: 420px) {
             font-size: 10px;
             margin-right: 7px;
         }
@@ -3224,7 +3224,7 @@ input, select{
         @media screen and (max-width: 450px) {
             flex: 0 0 61%;
         }
-        @media screen and (max-width: 390px) {
+        @media screen and (max-width: 420px) {
             font-size: 10px;
             flex: 0 0 67%;
             padding-left: 7px;
