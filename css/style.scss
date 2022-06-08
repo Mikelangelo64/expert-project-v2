@@ -192,6 +192,9 @@ section, .package-way{
     @media screen and (max-width: 770px) {
         padding: 70px 0;
     }
+    @media screen and (max-width: 520px) {
+        padding: 55px 0;
+    }
 
 }
 
@@ -689,13 +692,17 @@ input, select{
         margin-right: 30px;
 
         @media screen and (max-width: 1320px) {
-            margin-right: 20px;
+            margin-right: auto;
+
+            span{
+                display: block;
+            }
         }
 
         @media screen and (max-width: 1020px) {
             font-size: 14px;
         }
-        @media screen and (max-width: 1320px) {
+        @media screen and (max-width: 760px) {
             display: none;
         }
     }
@@ -703,7 +710,7 @@ input, select{
     //.header__tagline__mob 
     &__tagline__mob{
         display: none;
-        @media screen and (max-width: 1320px) {
+        @media screen and (max-width: 760px) {
             display: block;
             letter-spacing: 0.05em;
             font-size: 18px;
@@ -758,7 +765,7 @@ input, select{
             z-index: 10;
             top: 0;
             right: -100%;
-            width: 33%;
+            width: 38%;
             height: 100%;
             transition: all 0.7s ease 0.3s;
             background-image: linear-gradient(90deg, rgba(102, 102, 102, 0.3) 0%, rgba(102, 102, 102, 0) 100%);
@@ -865,9 +872,13 @@ input, select{
         @media screen and (max-width: 1320px) {
             display: block;
             cursor: pointer;
-            width: 34px;
-            height: 39px;
+            width: 38px;
+            height: 38px;
             transition: all .3s ease;
+            padding: 5px;
+
+            border-radius: 4px;
+            background-color: #144279;
 
             svg{
                 width: 100%;
@@ -875,7 +886,7 @@ input, select{
             }
             
             path:last-child{
-                fill: $blue;
+                fill: #fff;
             }
 
             &:hover{
@@ -885,7 +896,7 @@ input, select{
                     animation-timing-function: ease;
 
                     path:last-child{
-                        fill: $blue;
+                        fill: #fff;
                     }
                 }
             }
@@ -921,17 +932,21 @@ input, select{
         z-index: 2;
         //padding: 264px 0 107px 0;
         background: linear-gradient(90deg, rgba(102, 102, 102, 0) 0%, rgba(102, 102, 102, 0.3) 100%);
-        backdrop-filter: blur(18px);
+        backdrop-filter: blur(3px);
         margin-right: auto;
 
         @media screen and (max-width: 1680px) {
             width: 67%;
         }
-        @media screen and (max-width: 900px) {
-            width: 84%;
+        @media screen and (max-width: 1320px) {
+            width: 62%;
         }
-        @media screen and (max-width: 630px) {
-            width: 96%;
+        @media screen and (max-width: 900px) {
+            width: 66%;
+        }
+        @media screen and (max-width: 704px) {
+            width: 100%;
+            backdrop-filter: blur(6px);
         }
     }
 
@@ -2109,6 +2124,10 @@ input, select{
     justify-content: space-between;
     width: 100%;
 
+    @media screen and (min-width: 1020px){
+        align-items: flex-end;
+    }
+
     @media screen and (max-width: 1020px) {
         flex-wrap: wrap;
         justify-content: center;
@@ -2119,6 +2138,7 @@ input, select{
         cursor: pointer;
         width: calc(26% - 20px);
         margin-right: 20px;
+        
         // order: unset;
         // transition: order 1s ease;
         
@@ -2127,9 +2147,31 @@ input, select{
         flex-direction: column;
         transition: all .3s ease;
 
+        &:hover{
+            .package-list__info{
+                transition: all .3s ease;
+                background-color: #1D1D1D;
+                .package-list__label{
+                    svg path{
+                        fill: #fff;
+                    }
+                }
+                .package-list__title, .package-list__text{
+                    transition: all .3s ease;
+                    color: #fff;
+                }
+            }
+            .package-list__btn__body, .package-list__btn__arrow{
+                transition: all .3s ease;
+                background-color: $blue;
+            }
+        }
+
+        @media screen and (min-width: 1020px){
+            margin-bottom: 20px;
+        }
         @media screen and (max-width: 1020px) {
             width: calc(50% - 20px);
-
             &:nth-child(2){
                 margin-right: 0;
                 margin-bottom: 20px;
@@ -2167,13 +2209,15 @@ input, select{
         &._active-package{
             // @media screen and (max-width: 1020px) {
             //     order: 4;
-            // }
+            // } 
+            
 
             @media screen and (min-width: 1020px){
                 animation-name: package-active;
                 animation-duration: 0.75s;
                 animation-iteration-count: finite;
                 animation-direction: alternate;
+                margin-bottom: 0;
             }
             
 
@@ -2186,8 +2230,8 @@ input, select{
             }
             .package-list__btn__arrow {
                 background-color: $blue;
-                transform: translate(0, 0px);
-                transition: translate .2s ease 0s;
+                // transform: translate(0, 0px);
+                // transition: translate .2s ease 0s;
                 // display: flex;
                 // align-items: center;
                 // justify-content: center;
@@ -2229,6 +2273,7 @@ input, select{
         width: 65px;
         height: 125px;
         cursor: pointer;
+        transition: all .3s ease;
        // margin-bottom: 50px;
 
        @media screen and (max-width: 830px) {
@@ -2240,6 +2285,7 @@ input, select{
     &__title {
         cursor: pointer;
         margin-bottom: 50px;
+        transition: all .3s ease;
         //height: 76px;
         @media screen and (max-width: 830px) {
             margin-bottom: 35px;
@@ -2249,6 +2295,7 @@ input, select{
     //.package-list__text 
     &__text {
         cursor: pointer;
+        transition: all .3s ease;
         font-weight: 500;
         font-size: 16px;
         line-height: 20px;
@@ -2318,7 +2365,7 @@ input, select{
         justify-content: center;
         width: 100%;
 
-        transform: translate(0, -72px);
+        // transform: translate(0, -72px);
         position: relative;
         z-index: 1;
         transition: transform .2s ease .75s;
@@ -2356,10 +2403,10 @@ input, select{
     background-color: $blue;
     position: relative;
     z-index: 2;
-    display: none;
+    //display: none;
 
     &._active-package{
-        display: block;
+        //display: block;
     }
 
 
@@ -2625,7 +2672,13 @@ input, select{
         padding-bottom: 240px;
     }
     @media screen and (max-width: 520px){
-        padding-bottom: 120px;
+        padding-bottom: 187px;
+    }
+    @media screen and (max-width: 416px){
+        padding-bottom: 165px;
+    }
+    @media screen and (max-width: 370px){
+        padding-bottom: 139px;
     }
     
     //.calculation__bg
@@ -2661,11 +2714,11 @@ input, select{
             right: -31%;
         }
         @media screen and (max-width: 520px){
-            max-width: 300px;
-            right: -20%;
+            max-width: 390px;
+            right: -27%;
         }
-        @media screen and (max-width: 390px){
-            right: -28%;
+        @media screen and (max-width: 416px){
+            right: -30%;
         }
         // @media screen and (max-width: 590px){
         //     position: static;
@@ -2889,6 +2942,12 @@ input, select{
         &:last-child{
             margin-bottom: 0;
         }
+
+        &:hover{
+            .visiting-opportunity__num {
+                color: $blue;
+            }
+        }
     }
     
     //.visiting-opportunity__num 
@@ -2899,6 +2958,7 @@ input, select{
         font-size: 38px;
         line-height: 46px;
         margin-bottom: 7px;
+        transition: all .3s ease;
     }
     
     //.visiting-opportunity__text__block 
@@ -3021,10 +3081,14 @@ input, select{
         top: 50%;
         cursor: pointer;
         transition: opacity .2s ease;
-
-        @media screen and (max-width:1030px) {
-            display: none;
+        @media screen and (max-width:633px) {
+            width: 12px;
+            height: 28px;
         }
+
+        // @media screen and (max-width:1030px) {
+        //     display: none;
+        // }
 
         &.swiper-button-disabled{
             opacity: .4;
@@ -3043,12 +3107,25 @@ input, select{
         left: -23px;
         right: auto;
         transform: translate(0, -50%);
+        @media screen and (max-width:1030px) {
+            left: 3%;
+        }
+        @media screen and (max-width:633px) {
+            left: -4%;
+        }
+        
         
     }
     .swiper-button-next{
         left: auto;
         right: -23px;
         transform: translate(0, -50%) rotate(180deg);
+        @media screen and (max-width:1030px) {
+            right: 3%;
+        }
+        @media screen and (max-width:633px) {
+            right: -4%;
+        }
     }
 }
 
@@ -3253,6 +3330,7 @@ input, select{
 
     //.audit__bg
     &__bg{
+        pointer-events: none;
         position: absolute;
         bottom: -10%;
         left: 75px;
@@ -3274,11 +3352,14 @@ input, select{
             bottom: -3%;
         }
         @media screen and (max-width: 680px) {
-            max-width: 130px;
+            //max-width: 130px;
             bottom: -2%;
             left: -42px;
         }
-        @media screen and (max-width: 390px) {
+        @media screen and (max-width: 480px) {
+            left: -83px;
+        }
+        @media screen and (max-width: 393px) {
             display: none;
         }
 

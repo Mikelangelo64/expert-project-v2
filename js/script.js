@@ -39,34 +39,36 @@ $(document).ready(function(){
     })
 
     //package
+    $('.package-way').slideUp(300)
 
     $('.package-list .package-list__item').click(function(event){
 
         //appear arrow and do active card
-        $(this).addClass('_active-package')
+        $(this).toggleClass('_active-package')
         $('.package-list .package-list__item').not($(this)).removeClass("_active-package")
         
         //appear way
         const goto = $(this).attr('data-goto');
 
+
+        $(goto).toggleClass('_active-package').slideToggle(300)
+        $('.package-way').not($(goto)).removeClass('_active-package')
+        $('.package-way').not($(goto)).slideUp(300)
         if(goto && $(goto)){
-            // $(goto).addClass('_active-package').slideDown(300)
             
-            // $('.package-way').not($(goto)).removeClass('_active-package')
-            // $('.package-way').not($(goto)).slideUp(300)
         
-            console.log($(goto).offset());
-            console.log($('.main__btn').offset());
-            $(goto).addClass('_active-package')
-            $('.package-way').not($(goto)).removeClass('_active-package')
+            // console.log($(goto).offset());
+            // console.log($('.main__btn').offset());
+            // $(goto).addClass('_active-package')
+            // $('.package-way').not($(goto)).removeClass('_active-package')
         }
 
         //scroll to "way" on the adaptive
-        //if(document.body.clientWidth < 1021){
+        if($(goto).hasClass('_active-package')){
             $([document.documentElement, document.body]).animate({
                 scrollTop: $(".package-list").offset().top + $(".package-list").height()
             }, 500)
-        //}
+        }
         // setTimeout(()=>{
             
         // }, 300)
