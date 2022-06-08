@@ -1027,7 +1027,7 @@ input::placeholder, select::placeholder {
 }
 @media screen and (max-width: 900px) {
   .main {
-    padding: 195px 0 107px 0;
+    padding: 176px 0 107px 0;
   }
 }
 @media screen and (max-width: 770px) {
