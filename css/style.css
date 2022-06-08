@@ -1169,11 +1169,11 @@ input::placeholder, select::placeholder {
     position: relative;
     z-index: 1;
     padding-bottom: 400px;
-    margin-bottom: -197px;
+    margin-bottom: -215px;
     overflow: hidden;
     border-radius: 4px;
-    -webkit-transform: translate(0px, -247px);
-            transform: translate(0px, -247px);
+    -webkit-transform: translate(0px, -265px);
+            transform: translate(0px, -265px);
   }
   .main .main__img__tablet img {
     position: absolute;
@@ -1195,7 +1195,7 @@ input::placeholder, select::placeholder {
 }
 @media screen and (max-width: 770px) {
   .main__title {
-    margin-bottom: 80px;
+    margin-bottom: 65px;
   }
 }
 .main__title span {

@@ -1048,10 +1048,10 @@ input, select{
             position: relative;
             z-index: 1;
             padding-bottom: 400px;
-            margin-bottom: -197px;
+            margin-bottom: -215px;
             overflow: hidden;
             border-radius: 4px;
-            transform: translate(0px, -247px);
+            transform: translate(0px, -265px);
 
             img{
                 position: absolute;
@@ -1072,7 +1072,7 @@ input, select{
         margin-bottom: 50px;
 
         @media screen and (max-width: 770px) {
-            margin-bottom: 80px;
+            margin-bottom: 65px;
         }
 
         span{
