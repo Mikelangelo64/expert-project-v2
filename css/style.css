@@ -1807,6 +1807,7 @@ input::placeholder, select::placeholder {
   font-size: 44px;
   line-height: 40px;
   margin-right: 20px;
+  color: #00AFEF;
 }
 @media screen and (max-width: 520px) {
   .economy-list__numbering {
@@ -1888,7 +1889,7 @@ input::placeholder, select::placeholder {
     margin-bottom: 30px;
     padding-bottom: 30px;
     border-bottom: 1px solid rgba(29, 29, 29, 0.4);
-    grid: "picture picture" "title title" "profit cringe";
+    grid: "picture title" "profit cringe";
   }
   .benefits-list__row:last-child {
     padding-bottom: 0;
@@ -2000,7 +2001,7 @@ input::placeholder, select::placeholder {
 }
 .benefits-list__profit {
   color: #EFEFEF;
-  background: #24CC67;
+  background-color: #00AFEF;
 }
 .benefits-list__cringe {
   color: #EFEFEF;
@@ -2925,6 +2926,9 @@ input::placeholder, select::placeholder {
 }
 .calculation__text__block p:last-child {
   margin-bottom: 0;
+}
+.calculation__text__block p strong {
+  color: #00AFEF;
 }
 
 .calculation-form {

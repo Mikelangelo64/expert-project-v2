@@ -1650,6 +1650,8 @@ input, select{
         line-height: 40px;
         margin-right: 20px;
 
+        color: $blue;
+
         @media screen and (max-width: 520px) {
             font-size: 38px;
             line-height: 38px;
@@ -1750,9 +1752,12 @@ input, select{
             padding-bottom: 30px;
             border-bottom: 1px solid rgba(29, 29, 29, 40%);
 
+            // grid: 
+            //     "picture picture"
+            //     "title title"
+            //     "profit cringe";
             grid: 
-                "picture picture"
-                "title title"
+                "picture title"
                 "profit cringe";
             
             &:last-child{
@@ -1873,7 +1878,8 @@ input, select{
     //.benefits-list__profit {
     &__profit {
         color: #EFEFEF;
-        background: #24CC67;
+        // background: #24CC67;
+        background-color: $blue;
     }
    
     //.benefits-list__cringe {
@@ -2847,6 +2853,10 @@ input, select{
             }
             &:last-child{
                 margin-bottom: 0;
+            }
+            
+            strong{
+                color: $blue;
             }
         }
 
