@@ -41,7 +41,7 @@ $(document).ready(function(){
     //package
     $('.package-way').slideUp(300)
 
-    $('.package-list .package-list__item').click(function(event){
+    $('.package-list .package-list__item.package-list__item__open').click(function(event){
 
         //appear arrow and do active card
         $(this).toggleClass('_active-package')

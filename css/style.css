@@ -2277,13 +2277,6 @@ input::placeholder, select::placeholder {
           justify-content: space-between;
   width: 100%;
 }
-@media screen and (min-width: 1020px) {
-  .package-list {
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-  }
-}
 @media screen and (max-width: 1020px) {
   .package-list {
     -ms-flex-wrap: wrap;
